@@ -39,33 +39,55 @@
   "orders": [
     {
       "id": "ORD-001",
-      "status": "Placed",
+      "status": "placed",
       "date": "2024-03-07",
-      "name": "Rajnikant dash"
+      "name": "Rajnikant dash",
+      "quantity": 1,
+      "price": 92,
+      "category": 3
     },
     {
       "id": "ORD-002",
-      "status": "Fulfilled",
+      "status": "fulfilled",
       "date": "2024-03-06",
-      "name": "Abhigyan pal"
+      "name": "Abhigyan pal",
+      "quantity": 1,
+      "price": 92,
+      "category": 0
     },
     {
       "id": "ORD-003",
-      "status": "Rejected",
+      "status": "rejected",
       "date": "2024-03-05",
-      "name": "Archit garg"
+      "name": "Archit garg",
+      "quantity": 1,
+      "price": 92,
+      "category": 2
     },
     {
       "id": "ORD-004",
-      "status": "Placed",
+      "status": "placed",
       "date": "2024-03-04",
-      "name": "Abhilash kumar"
+      "name": "Abhilash kumar",
+      "quantity": 1,
+      "price": 92,
+      "category": 1
     },
     {
       "id": "ORD-005",
-      "status": "Fulfilled",
+      "status": "fulfilled",
       "date": "2024-03-03",
-      "name": "Rajnikant dash"
+      "name": "Rajnikant dash",
+      "quantity": 1,
+      "price": 92,
+      "category": 4
     }
+  ],
+  "categories": [
+    "Smartphones",
+    "Wearables",
+    "Home Electronics",
+    "Audio & Entertainment",
+    "Cameras & Accessories"
   ]
 }

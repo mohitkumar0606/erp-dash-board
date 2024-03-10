@@ -14,6 +14,7 @@ import { Plus, Pencil, Trash2, Search, X } from "lucide-react";
 
 import ManageProductModal from "./manage";
 import { toast } from "../ui/use-toast";
+import { filterByAnyValue } from "../../lib/utils";
 
 const App = () => {
     const { setCurrPage, data, setData } = useAppContext();
@@ -24,7 +25,7 @@ const App = () => {
     const [table, setTable] = useState(data.products);
 
     useEffect(() => {
-        setTable(data.products.filter(ele => ele.name.replace(/\s/g, '').toLocaleLowerCase().includes(search.toLocaleLowerCase())));
+        setTable(filterByAnyValue(data.products, search));
     }, [data, search])
 
 
@@ -55,7 +56,7 @@ const App = () => {
                                 <Button className="w-fit h-fit p-1" variant="outlined" size="icon" onClick={() => setOpen(false)}>
                                     <X className="h-4 w-4" />
                                 </Button>
-                                <Input placeholder="Search by 'Name'" onChange={(e) => {
+                                <Input placeholder="Search" onChange={(e) => {
                                     setSearch(e.target.value);
                                 }} value={search} />
                             </>
@@ -129,8 +130,6 @@ const App = () => {
                     </TableBody>
                 </Table>
             </div>
-
-
         </div>
     );
 };

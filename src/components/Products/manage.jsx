@@ -27,7 +27,6 @@ const ManageProductModal = ({ children, edit = false, data = null }) => {
         setOpen(false)
     }
 
-
     const manageProduct = (e) => {
         e.preventDefault();
         for (let key of Object.keys(formData)) {
@@ -59,7 +58,7 @@ const ManageProductModal = ({ children, edit = false, data = null }) => {
                 prev?.products?.map((item) => (item.id === formData.id ? formData : item))
                 : [
                     ...prev.products,
-                    { ...formData, id: (prev?.products?.length) + 1 }
+                    { ...formData, id: v4() }
                 ]
         }))
         toast({
