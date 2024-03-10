@@ -42,8 +42,7 @@
       "status": "placed",
       "date": "2024-03-07",
       "name": "Rajnikant dash",
-      "quantity": 1,
-      "price": 92,
+      "price": "Smartphones",
       "category": 3
     },
     {
@@ -51,36 +50,32 @@
       "status": "fulfilled",
       "date": "2024-03-06",
       "name": "Abhigyan pal",
-      "quantity": 1,
-      "price": 92,
-      "category": 0
+      "price": "Smartphones",
+      "category": "Cameras & Accessories"
     },
     {
       "id": "ORD-003",
       "status": "rejected",
       "date": "2024-03-05",
       "name": "Archit garg",
-      "quantity": 1,
-      "price": 92,
-      "category": 2
+      "price": "Smartphones",
+      "category": "Home Electronics"
     },
     {
       "id": "ORD-004",
       "status": "placed",
       "date": "2024-03-04",
       "name": "Abhilash kumar",
-      "quantity": 1,
       "price": 92,
-      "category": 1
+      "category": "Audio & Entertainment"
     },
     {
       "id": "ORD-005",
       "status": "fulfilled",
       "date": "2024-03-03",
       "name": "Rajnikant dash",
-      "quantity": 1,
       "price": 92,
-      "category": 4
+      "category": "Wearables"
     }
   ],
   "categories": [

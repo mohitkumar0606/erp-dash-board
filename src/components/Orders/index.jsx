@@ -1,30 +1,28 @@
-import { CircleDotDashed, Plus, Search, PackageCheck, Trash2, X, Ban, Edit, View } from "lucide-react";
+import { Plus, Search, Trash2, X, Edit, View } from "lucide-react";
 import { Button } from "../ui/button"
 import { Input } from "../ui/input"
 import { toast } from "../ui/use-toast"
+import status_icons_map from "../ui/status-icons-map"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../ui/table"
 import { SimpleDropdown } from "../ui/dropdown-menu"
+import OrderCard from "../ui/order-card"
 import { useEffect, useState } from "react";
 import useAppContext from "../../context/use-app-context";
 import { filterByAnyValue } from "../../lib/utils";
 import base_data from "../../data.json"
+import ManageOrderModal from "./manage"
 
 const App = () => {
     const { setCurrPage, data, setData } = useAppContext();
     const [search, setSearch] = useState("");
     const [open, setOpen] = useState(false);
+    const [orderOpen, setOrderOpen] = useState(null);
 
     const [table, setTable] = useState(data.products);
     useEffect(() => {
         setTable(filterByAnyValue(data.orders, search));
     }, [data, search])
     setCurrPage("orders");
-
-    const status_icons_map = {
-        "placed": <CircleDotDashed className="text-gray-400" size={15} />,
-        "fulfilled": <PackageCheck className="text-green-400" size={15} />,
-        "rejected": <Ban className="text-red-600" size={15} />
-    }
 
     const handleSelect = (id, status) => {
         setData(prev => ({
@@ -39,8 +37,19 @@ const App = () => {
         })
     }
 
+    const handleDelete = (id) => {
+        setData(prev => ({
+            ...prev,
+            orders: prev.orders.filter((item) => item.id !== id)
+        }))
+        toast({
+            title: "Order Deleted"
+        })
+    }
+
     return (
         <div className="w-screen md:w-[80%] h-screen p-5">
+            <OrderCard order={orderOpen} handleChange={() => { setOrderOpen(null) }} />
             <div className="w-full mb-5 flex flex-col md:flex-row items-center gap-4 justify-between">
                 <span className="text-lg font-bold">
                     Orders
@@ -61,11 +70,11 @@ const App = () => {
                                 }} value={search} />
                             </>
                     }
-                    {/* <ManageProductModal> */}
-                    <Button className="w-fit h-fit p-1" size="icon">
-                        <Plus className="h-4 w-4" />
-                    </Button>
-                    {/* </ManageProductModal> */}
+                    <ManageOrderModal>
+                        <Button className="w-fit h-fit p-1" size="icon">
+                            <Plus className="h-4 w-4" />
+                        </Button>
+                    </ManageOrderModal>
                 </div>
             </div>
             <div className="border shadow rounded-lg overflow-x-scroll">
@@ -82,15 +91,15 @@ const App = () => {
                     <TableBody>
                         {table?.length !== 0 ?
                             table.map((order) => (
-                                <TableRow key={Math.random()} className="cursor-pointer">
+                                <TableRow key={Math.random()} className="cursor-pointer" onClick={() => { setOrderOpen(order) }}>
                                     <TableCell>
-                                        {order.id}.
+                                        {order.id.slice(0,3)}..
                                     </TableCell>
                                     <TableCell>
                                         {order.name}
                                     </TableCell>
                                     <TableCell >
-                                        {base_data?.categories?.[order.category ?? 0]}
+                                        {order.category}
                                     </TableCell>
                                     <TableCell className="flex gap-2 text-gray-500 items-center justify-start">
                                         {status_icons_map[order.status]}
@@ -111,7 +120,10 @@ const App = () => {
                                             >
                                                 <Edit size={15} className="inline cursor-pointer mr-2 text-blue-400" />
                                             </SimpleDropdown>
-                                            <Trash2 size={15} className="cursor-pointer inline text-red-400" onClick={() => handleDelete(order.id)} />
+                                            <Trash2 size={15} className="cursor-pointer inline text-red-400" onClick={(e) => {
+                                                e.stopPropagation();
+                                                handleDelete(order.id);
+                                            }} />
                                         </div>
                                     </TableCell>
                                 </TableRow>
