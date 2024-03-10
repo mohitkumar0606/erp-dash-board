@@ -1,0 +1,71 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Product 1",
+      "category": "Category A",
+      "price": 10.99,
+      "stock_quantity": 100
+    },
+    {
+      "id": "2",
+      "name": "Product 2",
+      "category": "Category B",
+      "price": 20.49,
+      "stock_quantity": 50
+    },
+    {
+      "id": "3",
+      "name": "Product 3",
+      "category": "Category A",
+      "price": 5.99,
+      "stock_quantity": 200
+    },
+    {
+      "id": "4",
+      "name": "Product 4",
+      "category": "Category C",
+      "price": 15.99,
+      "stock_quantity": 75
+    },
+    {
+      "id": "5",
+      "name": "Product 5",
+      "category": "Category B",
+      "price": 8.49,
+      "stock_quantity": 150
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-001",
+      "status": "Placed",
+      "date": "2024-03-07",
+      "name": "Rajnikant dash"
+    },
+    {
+      "id": "ORD-002",
+      "status": "Fulfilled",
+      "date": "2024-03-06",
+      "name": "Abhigyan pal"
+    },
+    {
+      "id": "ORD-003",
+      "status": "Rejected",
+      "date": "2024-03-05",
+      "name": "Archit garg"
+    },
+    {
+      "id": "ORD-004",
+      "status": "Placed",
+      "date": "2024-03-04",
+      "name": "Abhilash kumar"
+    },
+    {
+      "id": "ORD-005",
+      "status": "Fulfilled",
+      "date": "2024-03-03",
+      "name": "Rajnikant dash"
+    }
+  ]
+}
