@@ -40,7 +40,7 @@ const App = () => {
     }
 
     return (
-        <div className="w-screen md:w-[80%] h-screen p-5">
+        <div className="w-screen md:w-[80%] h-screen p-5 overflow-scroll">
             <div className="w-full mb-5 flex flex-col md:flex-row items-center gap-4 justify-between">
                 <span className="text-lg font-bold">
                     Products
@@ -100,9 +100,9 @@ const App = () => {
                                     </TableCell>
                                     <TableCell className="flex gap-3">
                                         <ManageProductModal edit data={product}>
-                                            <Pencil size={15} className="cursor-pointer" />
+                                            <Pencil size={15} className="cursor-pointer text-blue-500" />
                                         </ManageProductModal>
-                                        <Trash2 size={15} className="cursor-pointer" onClick={() => handleDelete(product.id)} />
+                                        <Trash2 size={15} className="cursor-pointer text-red-400" onClick={() => handleDelete(product.id)} />
                                     </TableCell>
                                 </TableRow>
                             ))

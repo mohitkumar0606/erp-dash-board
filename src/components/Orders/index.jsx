@@ -9,7 +9,6 @@ import OrderCard from "../ui/order-card"
 import { useEffect, useState } from "react";
 import useAppContext from "../../context/use-app-context";
 import { filterByAnyValue } from "../../lib/utils";
-import base_data from "../../data.json"
 import ManageOrderModal from "./manage"
 
 const App = () => {
@@ -48,7 +47,7 @@ const App = () => {
     }
 
     return (
-        <div className="w-screen md:w-[80%] h-screen p-5">
+        <div className="w-screen md:w-[80%] h-screen p-5 overflow-scroll">
             <OrderCard order={orderOpen} handleChange={() => { setOrderOpen(null) }} />
             <div className="w-full mb-5 flex flex-col md:flex-row items-center gap-4 justify-between">
                 <span className="text-lg font-bold">
@@ -65,7 +64,7 @@ const App = () => {
                                 <Button className="w-fit h-fit p-1" variant="outlined" size="icon" onClick={() => setOpen(false)}>
                                     <X className="h-4 w-4" />
                                 </Button>
-                                <Input placeholder="Search by 'Name'" onChange={(e) => {
+                                <Input placeholder="Search" onChange={(e) => {
                                     setSearch(e.target.value);
                                 }} value={search} />
                             </>
@@ -93,7 +92,7 @@ const App = () => {
                             table.map((order) => (
                                 <TableRow key={Math.random()} className="cursor-pointer" onClick={() => { setOrderOpen(order) }}>
                                     <TableCell>
-                                        {order.id.slice(0,3)}..
+                                        {order.id.slice(0, 3)}..
                                     </TableCell>
                                     <TableCell>
                                         {order.name}

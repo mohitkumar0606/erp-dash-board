@@ -2,38 +2,73 @@
   "products": [
     {
       "id": "1",
-      "name": "Product 1",
-      "category": "Category A",
-      "price": 10.99,
+      "name": "Loren ZXYD",
+      "category": "Cameras & Accessories",
+      "price": 1043.99,
       "stock_quantity": 100
     },
     {
       "id": "2",
-      "name": "Product 2",
-      "category": "Category B",
-      "price": 20.49,
+      "name": "Canon EOS Rebel T7 DSLR Camera",
+      "category": "Cameras & Accessories",
+      "price": 499.99,
       "stock_quantity": 50
     },
     {
       "id": "3",
-      "name": "Product 3",
-      "category": "Category A",
-      "price": 5.99,
-      "stock_quantity": 200
-    },
-    {
-      "id": "4",
-      "name": "Product 4",
-      "category": "Category C",
-      "price": 15.99,
+      "name": "Nikon D3500 DSLR Camera",
+      "category": "Cameras & Accessories",
+      "price": 399.99,
       "stock_quantity": 75
     },
     {
+      "id": "4",
+      "name": "Sony Alpha a6000 Mirrorless Camera",
+      "category": "Cameras & Accessories",
+      "price": 649.99,
+      "stock_quantity": 40
+    },
+    {
       "id": "5",
-      "name": "Product 5",
-      "category": "Category B",
-      "price": 8.49,
-      "stock_quantity": 150
+      "name": "GoPro HERO9 Black",
+      "category": "Cameras & Accessories",
+      "price": 449.99,
+      "stock_quantity": 60
+    },
+    {
+      "id": "6",
+      "name": "DJI Mavic Air 2 Drone",
+      "category": "Cameras & Accessories",
+      "price": 799.99,
+      "stock_quantity": 30
+    },
+    {
+      "id": "7",
+      "name": "Bose QuietComfort 35 II Wireless Headphones",
+      "category": "Audio & Entertainment",
+      "price": 299.99,
+      "stock_quantity": 100
+    },
+    {
+      "id": "8",
+      "name": "Apple AirPods Pro",
+      "category": "Audio & Entertainment",
+      "price": 249.99,
+      "stock_quantity": 80
+    },
+    {
+      "id": "9",
+      "name": "Samsung 65-Inch QLED 4K Smart TV",
+      "category": "Home Electronics",
+      "price": 1499.99,
+      "stock_quantity": 20
+    },
+    {
+      "id": "10",
+      "name": "Google Nest Hub Max",
+      "category": "Home Electronics",
+      "price": 229.99,
+      "stock_quantity": 50
     }
   ],
   "orders": [
@@ -41,41 +76,481 @@
       "id": "ORD-001",
       "status": "placed",
       "date": "2024-03-07",
-      "name": "Rajnikant dash",
-      "price": "Smartphones",
-      "category": 3
+      "name": "Rajnikant Dash",
+      "price": 434,
+      "category": "Smartphones",
+      "mode_of_payment": "Credit Card"
     },
     {
       "id": "ORD-002",
       "status": "fulfilled",
       "date": "2024-03-06",
-      "name": "Abhigyan pal",
-      "price": "Smartphones",
-      "category": "Cameras & Accessories"
+      "name": "Abhigyan Pal",
+      "price": 235,
+      "category": "Cameras & Accessories",
+      "deliver_date": "2024-03-08",
+      "mode_of_payment": "Debit Card"
     },
     {
       "id": "ORD-003",
       "status": "rejected",
       "date": "2024-03-05",
-      "name": "Archit garg",
-      "price": "Smartphones",
-      "category": "Home Electronics"
+      "name": "Archit Garg",
+      "price": 321,
+      "category": "Home Electronics",
+      "deliver_date": "",
+      "mode_of_payment": "UPI"
     },
     {
       "id": "ORD-004",
       "status": "placed",
       "date": "2024-03-04",
-      "name": "Abhilash kumar",
+      "name": "Abhilash Kumar",
       "price": 92,
-      "category": "Audio & Entertainment"
+      "category": "Audio & Entertainment",
+      "mode_of_payment": "Cash on Delivery"
     },
     {
       "id": "ORD-005",
       "status": "fulfilled",
       "date": "2024-03-03",
-      "name": "Rajnikant dash",
+      "name": "Rajnikant Dash",
       "price": 92,
-      "category": "Wearables"
+      "category": "Wearables",
+      "deliver_date": "2024-03-05",
+      "mode_of_payment": "Credit Card"
+    },
+    {
+      "id": "ORD-006",
+      "status": "placed",
+      "date": "2024-03-02",
+      "name": "Sneha Jain",
+      "price": 145,
+      "category": "Wearables",
+      "mode_of_payment": "Debit Card"
+    },
+    {
+      "id": "ORD-007",
+      "status": "fulfilled",
+      "date": "2024-03-01",
+      "name": "Vikram Singh",
+      "price": 349,
+      "category": "Smartphones",
+      "deliver_date": "2024-03-05",
+      "mode_of_payment": "Net Banking"
+    },
+    {
+      "id": "ORD-008",
+      "status": "rejected",
+      "date": "2024-02-29",
+      "name": "Neha Sharma",
+      "price": 78,
+      "category": "Audio & Entertainment",
+      "deliver_date": "",
+      "mode_of_payment": "UPI"
+    },
+    {
+      "id": "ORD-009",
+      "status": "placed",
+      "date": "2024-02-28",
+      "name": "Amit Patel",
+      "price": 199,
+      "category": "Cameras & Accessories",
+      "mode_of_payment": "Credit Card"
+    },
+    {
+      "id": "ORD-010",
+      "status": "fulfilled",
+      "date": "2024-02-27",
+      "name": "Rajat Gupta",
+      "price": 279,
+      "category": "Home Electronics",
+      "deliver_date": "2024-03-03",
+      "mode_of_payment": "Debit Card"
+    },
+    {
+      "id": "ORD-011",
+      "status": "placed",
+      "date": "2024-02-26",
+      "name": "Smita Verma",
+      "price": 56,
+      "category": "Smartphones",
+      "mode_of_payment": "Cash on Delivery"
+    },
+    {
+      "id": "ORD-012",
+      "status": "fulfilled",
+      "date": "2024-02-25",
+      "name": "Ankit Singh",
+      "price": 125,
+      "category": "Wearables",
+      "deliver_date": "2024-03-01",
+      "mode_of_payment": "Net Banking"
+    },
+    {
+      "id": "ORD-013",
+      "status": "placed",
+      "date": "2024-02-24",
+      "name": "Rahul Mehta",
+      "price": 189,
+      "category": "Home Electronics",
+      "mode_of_payment": "Credit Card"
+    },
+    {
+      "id": "ORD-014",
+      "status": "fulfilled",
+      "date": "2024-02-23",
+      "name": "Priya Singh",
+      "price": 399,
+      "category": "Smartphones",
+      "deliver_date": "2024-02-28",
+      "mode_of_payment": "Debit Card"
+    },
+    {
+      "id": "ORD-015",
+      "status": "rejected",
+      "date": "2024-02-22",
+      "name": "Alok Sharma",
+      "price": 78,
+      "category": "Audio & Entertainment",
+      "deliver_date": "",
+      "mode_of_payment": "UPI"
+    },
+    {
+      "id": "ORD-016",
+      "status": "placed",
+      "date": "2024-02-21",
+      "name": "Kavita Gupta",
+      "price": 299,
+      "category": "Wearables",
+      "mode_of_payment": "Credit Card"
+    },
+    {
+      "id": "ORD-017",
+      "status": "fulfilled",
+      "date": "2024-02-20",
+      "name": "Suresh Singh",
+      "price": 199,
+      "category": "Cameras & Accessories",
+      "deliver_date": "2024-02-25",
+      "mode_of_payment": "Net Banking"
+    },
+    {
+      "id": "ORD-018",
+      "status": "placed",
+      "date": "2024-02-19",
+      "name": "Rohit Verma",
+      "price": 149,
+      "category": "Home Electronics",
+      "mode_of_payment": "Debit Card"
+    },
+    {
+      "id": "ORD-019",
+      "status": "fulfilled",
+      "date": "2024-02-18",
+      "name": "Geeta Sharma",
+      "price": 499,
+      "category": "Smartphones",
+      "deliver_date": "2024-02-23",
+      "mode_of_payment": "Credit Card"
+    },
+    {
+      "id": "ORD-020",
+      "status": "rejected",
+      "date": "2024-02-17",
+      "name": "Ramesh Kumar",
+      "price": 92,
+      "category": "Audio & Entertainment",
+      "deliver_date": "",
+      "mode_of_payment": "Cash on Delivery"
+    },
+    {
+      "id": "ORD-021",
+      "status": "placed",
+      "date": "2024-02-16",
+      "name": "Anjali Singh",
+      "price": 199,
+      "category": "Wearables",
+      "mode_of_payment": "Net Banking"
+    },
+    {
+      "id": "ORD-022",
+      "status": "fulfilled",
+      "date": "2024-02-15",
+      "name": "Ravi Patel",
+      "price": 349,
+      "category": "Cameras & Accessories",
+      "deliver_date": "2024-02-20",
+      "mode_of_payment": "Debit Card"
+    },
+    {
+      "id": "ORD-023",
+      "status": "placed",
+      "date": "2024-02-14",
+      "name": "Pooja Sharma",
+      "price": 189,
+      "category": "Home Electronics",
+      "mode_of_payment": "Credit Card"
+    },
+    {
+      "id": "ORD-024",
+      "status": "fulfilled",
+      "date": "2024-02-13",
+      "name": "Avinash Kumar",
+      "price": 399,
+      "category": "Smartphones",
+      "deliver_date": "2024-02-18",
+      "mode_of_payment": "Cash on Delivery"
+    },
+    {
+      "id": "ORD-025",
+      "status": "rejected",
+      "date": "2024-02-12",
+      "name": "Rahul Singh",
+      "price": 78,
+      "category": "Audio & Entertainment",
+      "deliver_date": "",
+      "mode_of_payment": "UPI"
+    },
+    {
+      "id": "ORD-026",
+      "status": "placed",
+      "date": "2024-02-11",
+      "name": "Anita Gupta",
+      "price": 299,
+      "category": "Wearables",
+      "mode_of_payment": "Credit Card"
+    },
+    {
+      "id": "ORD-027",
+      "status": "fulfilled",
+      "date": "2024-02-10",
+      "name": "Vishal Sharma",
+      "price": 199,
+      "category": "Cameras & Accessories",
+      "deliver_date": "2024-02-15",
+      "mode_of_payment": "Net Banking"
+    },
+    {
+      "id": "ORD-028",
+      "status": "placed",
+      "date": "2024-02-09",
+      "name": "Ramesh Verma",
+      "price": 149,
+      "category": "Home Electronics",
+      "mode_of_payment": "Debit Card"
+    },
+    {
+      "id": "ORD-029",
+      "status": "fulfilled",
+      "date": "2024-02-08",
+      "name": "Neeta Singh",
+      "price": 499,
+      "category": "Smartphones",
+      "deliver_date": "2024-02-13",
+      "mode_of_payment": "Credit Card"
+    },
+    {
+      "id": "ORD-030",
+      "status": "rejected",
+      "date": "2024-02-07",
+      "name": "Alok Kumar",
+      "price": 92,
+      "category": "Audio & Entertainment",
+      "deliver_date": "",
+      "mode_of_payment": "Cash on Delivery"
+    },
+    {
+      "id": "ORD-031",
+      "status": "placed",
+      "date": "2024-02-06",
+      "name": "Kavita Gupta",
+      "price": 199,
+      "category": "Wearables",
+      "mode_of_payment": "Net Banking"
+    },
+    {
+      "id": "ORD-032",
+      "status": "fulfilled",
+      "date": "2024-02-05",
+      "name": "Suresh Singh",
+      "price": 349,
+      "category": "Cameras & Accessories",
+      "deliver_date": "2024-02-10",
+      "mode_of_payment": "Debit Card"
+    },
+    {
+      "id": "ORD-033",
+      "status": "placed",
+      "date": "2024-02-04",
+      "name": "Rohit Verma",
+      "price": 189,
+      "category": "Home Electronics",
+      "mode_of_payment": "Credit Card"
+    },
+    {
+      "id": "ORD-034",
+      "status": "fulfilled",
+      "date": "2024-02-03",
+      "name": "Geeta Sharma",
+      "price": 499,
+      "category": "Smartphones",
+      "deliver_date": "2024-02-08",
+      "mode_of_payment": "Cash on Delivery"
+    },
+    {
+      "id": "ORD-035",
+      "status": "rejected",
+      "date": "2024-02-02",
+      "name": "Ramesh Kumar",
+      "price": 92,
+      "category": "Audio & Entertainment",
+      "deliver_date": "",
+      "mode_of_payment": "UPI"
+    },
+    {
+      "id": "ORD-036",
+      "status": "placed",
+      "date": "2024-02-01",
+      "name": "Anjali Singh",
+      "price": 199,
+      "category": "Wearables",
+      "mode_of_payment": "Credit Card"
+    },
+    {
+      "id": "ORD-037",
+      "status": "fulfilled",
+      "date": "2024-01-31",
+      "name": "Ravi Patel",
+      "price": 349,
+      "category": "Cameras & Accessories",
+      "deliver_date": "2024-02-05",
+      "mode_of_payment": "Net Banking"
+    },
+    {
+      "id": "ORD-038",
+      "status": "placed",
+      "date": "2024-01-30",
+      "name": "Pooja Sharma",
+      "price": 189,
+      "category": "Home Electronics",
+      "mode_of_payment": "Debit Card"
+    },
+    {
+      "id": "ORD-039",
+      "status": "fulfilled",
+      "date": "2024-01-29",
+      "name": "Avinash Kumar",
+      "price": 399,
+      "category": "Smartphones",
+      "deliver_date": "2024-02-03",
+      "mode_of_payment": "Credit Card"
+    },
+    {
+      "id": "ORD-040",
+      "status": "rejected",
+      "date": "2024-01-28",
+      "name": "Rahul Singh",
+      "price": 78,
+      "category": "Audio & Entertainment",
+      "deliver_date": "",
+      "mode_of_payment": "Cash on Delivery"
+    },
+    {
+      "id": "ORD-041",
+      "status": "placed",
+      "date": "2024-01-27",
+      "name": "Anita Gupta",
+      "price": 299,
+      "category": "Wearables",
+      "mode_of_payment": "UPI"
+    },
+    {
+      "id": "ORD-042",
+      "status": "fulfilled",
+      "date": "2024-01-26",
+      "name": "Vishal Sharma",
+      "price": 199,
+      "category": "Cameras & Accessories",
+      "deliver_date": "2024-01-31",
+      "mode_of_payment": "Credit Card"
+    },
+    {
+      "id": "ORD-043",
+      "status": "placed",
+      "date": "2024-01-25",
+      "name": "Ramesh Verma",
+      "price": 149,
+      "category": "Home Electronics",
+      "mode_of_payment": "Debit Card"
+    },
+    {
+      "id": "ORD-044",
+      "status": "fulfilled",
+      "date": "2024-01-24",
+      "name": "Neeta Singh",
+      "price": 499,
+      "category": "Smartphones",
+      "deliver_date": "2024-01-29",
+      "mode_of_payment": "Net Banking"
+    },
+    {
+      "id": "ORD-045",
+      "status": "rejected",
+      "date": "2024-01-23",
+      "name": "Alok Kumar",
+      "price": 92,
+      "category": "Audio & Entertainment",
+      "deliver_date": "",
+      "mode_of_payment": "UPI"
+    },
+    {
+      "id": "ORD-046",
+      "status": "placed",
+      "date": "2024-01-22",
+      "name": "Kavita Gupta",
+      "price": 199,
+      "category": "Wearables",
+      "mode_of_payment": "Credit Card"
+    },
+    {
+      "id": "ORD-047",
+      "status": "fulfilled",
+      "date": "2024-01-21",
+      "name": "Suresh Singh",
+      "price": 349,
+      "category": "Cameras & Accessories",
+      "deliver_date": "2024-01-26",
+      "mode_of_payment": "Debit Card"
+    },
+    {
+      "id": "ORD-048",
+      "status": "placed",
+      "date": "2024-01-20",
+      "name": "Rohit Verma",
+      "price": 189,
+      "category": "Home Electronics",
+      "mode_of_payment": "Cash on Delivery"
+    },
+    {
+      "id": "ORD-049",
+      "status": "fulfilled",
+      "date": "2024-01-19",
+      "name": "Geeta Sharma",
+      "price": 499,
+      "category": "Smartphones",
+      "deliver_date": "2024-01-24",
+      "mode_of_payment": "Credit Card"
+    },
+    {
+      "id": "ORD-050",
+      "status": "rejected",
+      "date": "2024-01-18",
+      "name": "Ramesh Kumar",
+      "price": 92,
+      "category": "Audio & Entertainment",
+      "deliver_date": "",
+      "mode_of_payment": "UPI"
     }
   ],
   "categories": [
