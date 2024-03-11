@@ -30,7 +30,7 @@ const ManageProductModal = ({ children, edit = false, data = null }) => {
     const manageProduct = (e) => {
         e.preventDefault();
         for (let key of Object.keys(formData)) {
-            if (!formData[key].length) {
+            if (!String(formData[key]).length) {
                 toast({
                     variant: "destructive",
                     title: "Fill '" + key + "'!"

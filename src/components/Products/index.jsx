@@ -40,7 +40,7 @@ const App = () => {
     }
 
     return (
-        <div className="w-screen md:w-[80%] h-screen p-5 overflow-scroll">
+        <div className="w-full h-screen p-5 overflow-scroll">
             <div className="w-full mb-5 flex flex-col md:flex-row items-center gap-4 justify-between">
                 <span className="text-lg font-bold">
                     Products
