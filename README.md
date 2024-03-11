@@ -10,8 +10,14 @@ Currently, two official plugins are available:
 #### To do
 
 - ✅ Product Crud + Responsive sheet + Deployment
-- Orders
+- ✅ Orders
 - Dashboard
+    - ✅ Summary cards
+    - reset db + add creation_time + delivery_date to that
+    - Low inventory
+    - Upcomming deliveries
+    - Chart of daily orders
+    - Pie chart of total order - reject, pending, placed
 - Calendar
 - Theming
 
