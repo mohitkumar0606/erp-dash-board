@@ -1,16 +1,20 @@
 import useAppContext from "../../context/use-app-context";
 import base_data from "../../data.json";
+import { cn } from "../../lib/utils";
+import Counter from "../ui/counter";
 
 const InventoryCard = ({ data }) => {
     return <div className="my-2 rounded-md bg-gray-100 p-2">
-        <h3 className="font-semibold flex items-center text-sm justify-between">
-            {data.category}
-            <i className="text-green-600 font-semibold text-xs">
-                ${Number(data.totalWorth).toFixed(2)}
+        <h3 className="flex items-center text-sm justify-between">
+            <span className="font-semibold text-gray-600">
+                {data.category}
+            </span>
+            <i className={cn("font-semibold text-xs", !data.quantity && "text-red-500")}>
+                <Counter targetNumber={data.quantity} />
             </i>
         </h3>
-        <p className="font-semibold text-xs text-gray-400">
-            Quantity : {data.quantity}
+        <p className="text-xs text-gray-400">
+            $<Counter targetNumber={Number(data.totalWorth).toFixed(2)} />
         </p>
     </div>
 }
