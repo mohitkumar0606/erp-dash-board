@@ -58,7 +58,7 @@ const ManageProductModal = ({ children, edit = false, data = null }) => {
                 prev?.products?.map((item) => (item.id === formData.id ? formData : item))
                 : [
                     ...prev.products,
-                    { ...formData, id: v4() }
+                    { ...formData, id: v4(), date: new Date().toISOString().split('T')[0] }
                 ]
         }))
         toast({

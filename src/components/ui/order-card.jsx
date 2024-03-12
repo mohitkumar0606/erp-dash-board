@@ -9,6 +9,18 @@ import {
 import status_icons_map from "./status-icons-map"
 
 export default function OrderCard({ order, handleChange }) {
+    const deliveryMap = (order) => {
+        switch (order?.status) {
+            case "placed":
+                return order?.deliver_date && `Expected to be deliver on ${order?.deliver_date}`
+
+            case "fulfilled":
+                return order?.deliver_date && `Delivered on ${order?.deliver_date}`
+
+            default:
+                return ""
+        }
+    }
     return (
         <Dialog onOpenChange={handleChange} open={order}>
             <DialogContent className="sm:max-w-[425px]">
@@ -22,11 +34,16 @@ export default function OrderCard({ order, handleChange }) {
                             <span className="font-semibold">Status {order?.status}</span>
                             {status_icons_map[order?.status]}
                         </div>
-                        Order # {order?.id}
+                        <span>
+                            {deliveryMap(order)}
+                        </span>
                     </DialogDescription>
                 </DialogHeader>
                 <DialogDescription>
                     <h3 className="font-semibold text-black text-center md:text-start">Summary</h3>
+                    <p className="text-xs text-gray-400">
+                        Order # {order?.id}
+                    </p>
                     <h3 className="text-gray-400 text-center md:text-start">Placed by {order?.name}</h3>
                     <h3 className="font-bold text-center md:text-start">Total price ${order?.price}</h3>
                 </DialogDescription>

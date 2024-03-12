@@ -11,7 +11,7 @@ import { Toaster } from "./components/ui/toaster"
 import Sidebar from "./components/ui/navigation-menu";
 import { useEffect, useState } from "react";
 import AppContext from "./context/app-context";
-import mockData from "./data.json"
+import { modifyMockdataToCurr } from "./lib/utils";
 
 function App() {
   const [currPage, setCurrPage] = useState("dashboard");
@@ -19,7 +19,7 @@ function App() {
   const [data, setData] = useState(
     localStorage.getItem('erp-data') ?
       JSON.parse(localStorage.getItem('erp-data')) :
-      mockData);
+      modifyMockdataToCurr());
 
   // Update local storage whenever the state changes
   useEffect(() => {
