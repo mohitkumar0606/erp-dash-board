@@ -1,4 +1,4 @@
-# ERP Dashboard
+# ERP Dashboard (live)[https://erp-dashboard-eta.vercel.app]
 
 This is a Vite-based React app for an ERP dashboard.
 
@@ -41,8 +41,35 @@ This is a Vite-based React app for an ERP dashboard.
 
 
 ### App walkthrough
+1. This is the dashboard where you can find all the things:
+   Total No.of Product, Category, Order Related(new order,rejected, total order),
+   pictorial view of orders through Pie Chart, Line Chart and the 
+   upcoming order delivery date through calendar.
+   
+![image](https://github.com/mohitkumar0606/erp-dashboard/assets/100067909/eca4e7f3-3087-48c1-93cc-78ab84b4ebd2)
+![image](https://github.com/mohitkumar0606/erp-dashboard/assets/100067909/99149645-703b-44d2-924c-0ab806b9c7a2)
 
-1.    ![1](https://github.com/mohitkumar0606/erp-dashboard/assets/100067909/dcd5b08c-2661-44fe-81b9-89aa67440eac)
+
+2. This is the Product Management Part:
+   Here you can find out the list of products and
+   you can also do the crud operations i.e, adding new product and removing any product.
+   
+![image](https://github.com/mohitkumar0606/erp-dashboard/assets/100067909/e85500c3-6015-4790-97bb-68f2263347e6)
+![image](https://github.com/mohitkumar0606/erp-dashboard/assets/100067909/b3d311cb-91ea-4f8c-98ca-aef9e749be7b)
+
+
+3. This is the Order Management Part:
+   Here you can find out the list of items ordered i.e, either they are placed or rejected.
+   And also you can add any new order.
+   
+![image](https://github.com/mohitkumar0606/erp-dashboard/assets/100067909/027f6ea6-ba85-499d-b127-e9132f4a1ce3)
+![image](https://github.com/mohitkumar0606/erp-dashboard/assets/100067909/90fa8fda-1025-488a-8753-e16488913b42)
+
+4. Calendar:
+   It will show the date of upcoming orders on calendar.
+   
+![image](https://github.com/mohitkumar0606/erp-dashboard/assets/100067909/ec1bfcf9-bc21-45b8-b5f0-de1ca978533b)
+
 
 ## Technologies Used
 
