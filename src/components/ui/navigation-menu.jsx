@@ -1,21 +1,25 @@
-import { ArrowLeftFromLineIcon, ArrowRightFromLineIcon, BookA, ChevronRightCircle, Gauge, Menu, PackageIcon } from "lucide-react"
+import { ArrowLeftFromLineIcon, ArrowRightFromLineIcon, BookA, CalendarDays, Gauge, Menu, PackageIcon } from "lucide-react"
 
 import { cn } from "../../lib/utils"
 import { useNavigate } from "react-router-dom"
 import { Button } from "./button";
 import { Sheet, SheetContent, SheetTrigger } from "./sheet"
 import { useState } from "react";
+import useAppContext from "../../context/use-app-context";
 
 const navicons = {
   "dashboard": <Gauge className="inline" size={20} />,
   "products": <PackageIcon className="inline" size={20} />,
-  "orders": <BookA className="inline" size={20} />
+  "orders": <BookA className="inline" size={20} />,
+  "calendar": <CalendarDays className="inline" size={20} />
 }
 
 // eslint-disable-next-line react/prop-types
-function Sidebar({ currPage }) {
+function Sidebar() {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+
+  const { currPage } = useAppContext();
 
   const Navbar = ({ className }) => {
     return <div className={cn(className, "h-full md:flex flex-col justify-between bg-black text-white",
@@ -26,11 +30,16 @@ function Sidebar({ currPage }) {
             ENTNT Corp
           </h1>
         </div>}
+        <div className="md:p-2 md:hidden">
+          <h1 className="text-xl font-bold text-left md:ml-3 w-full">
+            ENTNT Corp
+          </h1>
+        </div>
         <div className="w-full md:p-5">
           {
-            ["dashboard", "products", "orders"].map((item, index) => (
+            ["dashboard", "products", "orders", "calendar"].map((item, index) => (
               <div key={index} onClick={() => navigate(`/${item}`)}
-                className={cn("w-full my-3 text-left px-2 py-1 transition flex items-center gap-2  capitalize text-lg hover:underline cursor-pointer",
+                className={cn("w-full my-3 text-left px-2 py-1 transition flex items-center gap-2 capitalize text-sm hover:underline cursor-pointer",
                   open ?
                     (currPage === item ? "text-black bg-white rounded-full" : "text-gray-500") :
                     (currPage === item ? "text-white bg-gray-500 rounded-md" : "text-gray-500"),
@@ -39,6 +48,9 @@ function Sidebar({ currPage }) {
                 {open && <span>
                   {item}
                 </span>}
+                <span className="md:hidden">
+                  {item}
+                </span>
               </div>
             ))
           }
@@ -57,7 +69,7 @@ function Sidebar({ currPage }) {
         <Navbar />
       </SheetContent>
       <SheetTrigger>
-        <Button className="w-fit h-fit p-1 md:hidden absolute top-5 left-3" size="icon" variant="outline">
+        <Button className="w-fit h-fit p-1 md:hidden absolute top-5 left-3 z-10" size="icon" variant="outline">
           <Menu />
         </Button>
       </SheetTrigger>

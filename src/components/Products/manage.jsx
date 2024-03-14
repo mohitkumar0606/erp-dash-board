@@ -5,6 +5,8 @@ import { Input } from '../ui/input';
 import { toast } from '../ui/use-toast';
 import useAppContext from '../../context/use-app-context';
 import { v4 } from 'uuid';
+import SelectInput from '../ui/select';
+import data_mock from "../../data.json"
 
 const ManageProductModal = ({ children, edit = false, data = null }) => {
     const [open, setOpen] = useState(false);
@@ -58,7 +60,7 @@ const ManageProductModal = ({ children, edit = false, data = null }) => {
                 prev?.products?.map((item) => (item.id === formData.id ? formData : item))
                 : [
                     ...prev.products,
-                    { ...formData, id: v4() }
+                    { ...formData, id: v4(), date: new Date().toISOString().split('T')[0] }
                 ]
         }))
         toast({
@@ -90,7 +92,12 @@ const ManageProductModal = ({ children, edit = false, data = null }) => {
                         </code></span> : "Add New Product"}</DialogTitle>
                     <DialogDescription className="flex flex-col gap-5 py-6">
                         <Input onChange={handleChange} value={formData["name"]} name="name" placeholder="Product Name" required />
-                        <Input onChange={handleChange} value={formData["category"]} name="category" placeholder="Category" required />
+                        <SelectInput options={data_mock.categories} value={formData.category} onValueChange={category => {
+                            setFormData(prev => ({
+                                ...prev,
+                                category
+                            }))
+                        }} />
                         <Input onChange={handleChange} value={formData["price"]} name="price" placeholder="Price ($)" type="number" min="0" required />
                         <Input onChange={handleChange} value={formData["stock_quantity"]} name="stock_quantity" placeholder="Quantity" type="number" min="0" required />
                     </DialogDescription>

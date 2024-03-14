@@ -49,7 +49,11 @@ const ManageOrderModal = ({ children }) => {
             ...prev,
             orders: [
                 ...prev.orders,
-                { ...formData, id: v4(), status: "placed", date: new Date().toISOString().split('T')[0] }
+                {
+                    ...formData, id: v4(), status: "placed",
+                    date: new Date().toISOString().split('T')[0],
+                    deliver_date: (new Date(new Date().getTime() + 10 * 24 * 60 * 60 * 1000)).toISOString().split('T')[0]
+                }
             ]
         }))
         toast({

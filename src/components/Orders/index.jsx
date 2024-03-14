@@ -24,11 +24,15 @@ const App = () => {
     setCurrPage("orders");
 
     const handleSelect = (id, status) => {
+        const date_10 = (new Date(new Date().getTime() + 10 * 24 * 60 * 60 * 1000)).toISOString().split('T')[0]
+        const deliver_date = (status !== "rejected") ? date_10 : null;
+
         setData(prev => ({
             ...prev,
             orders: prev.orders.map((order) => order.id === id ? {
                 ...order,
-                status
+                status,
+                deliver_date
             } : order)
         }))
         toast({
