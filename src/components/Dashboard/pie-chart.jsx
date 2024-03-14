@@ -30,12 +30,11 @@ const PieChart = () => {
         }
     };
     return (
-        <div className='flex my-4 bg-white rounded-lg justify-center items-center'>
+        <div className='flex my-4 bg-white rounded-lg justify-center items-center md:w-6/12'>
             <ReactApexChart
                 options={chartOptions}
                 series={chartData.map(item => item.data)}
                 type="donut"
-                width="300"
             />
         </div>
     );

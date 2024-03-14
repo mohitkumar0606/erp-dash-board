@@ -1,25 +1,48 @@
-# React + Vite
+# ERP Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a Vite-based React app for an ERP dashboard.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Product Crud**: Allows for CRUD operations on products.
+- **Responsive Sheet**: Provides a responsive design for easy use on different devices.
+- **Deployment**: Deployment has been set up for easy deployment of the app.
 
-#### To do
+### Dashboard
 
-- ✅ Product Crud + Responsive sheet + Deployment
-- ✅ Orders
-- Dashboard
-    - ✅ Summary cards
-    - ✅ reset db + add_creation_time + delivery_date to that
-    - ✅ Low inventory
-    - Upcomming deliveries
-    - Chart of daily orders
-    - ✅ Pie chart of total order - reject, pending, placed
-- Calendar
-- Theming
+- **Summary Cards**: Displays summary information in a visually appealing format.
+- **Reset DB + Add_creation_time + Delivery_date**: Functionality to reset the database and add creation time and delivery date.
+- **Low Inventory**: Alerts for low inventory.
+- **Upcoming Deliveries**: Displays information about upcoming deliveries.
+- **Chart of Daily Orders**: Shows a chart of daily orders with the ability to change time slots and add dropdowns to orders/products.
+- **Pie Chart of Total Order**: Shows a pie chart of total orders, including those rejected, pending, and placed.
 
----
-### Sync with local storage
+### Calendar
+
+- Calendar functionality is included.
+
+### Theming
+
+- Theming options are available for customization.
+
+## Getting Started
+
+1. Clone the repository.
+
+    ```bash
+    git clone https://github.com/mohitkumar0606/erp-dashboard.git
+    ```
+
+2. Install dependencies with
+    ```bash
+    cd erp-dashboard
+    npm install
+    ```
+3. Start the development server with `npm run dev`.
+4. Build the project for production with `npm run build`.
+
+## Technologies Used
+
+- React
+- Vite
+- Other technologies as required for specific features

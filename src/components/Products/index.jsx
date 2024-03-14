@@ -121,7 +121,7 @@ const App = () => {
                                 Total
                             </TableCell>
                             <TableCell className="font-bold">
-                                {table.reduce((sum, product) => sum + Number(product.price), 0)}
+                                {table.reduce((sum, product) => sum + Number(product.price), 0).toFixed(2)}
                             </TableCell>
                             <TableCell className="font-bold">
                                 {table.reduce((sum, product) => sum + Number(product.stock_quantity), 0)}
