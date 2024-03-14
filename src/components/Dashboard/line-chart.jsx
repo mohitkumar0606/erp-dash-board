@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import ReactApexChart from "react-apexcharts";
 import useAppContext from "../../context/use-app-context";
-import { ChevronFirst, ChevronLast } from "lucide-react";
 
 const LineChart = () => {
     const { data } = useAppContext();
@@ -31,22 +30,11 @@ const LineChart = () => {
         }))
     }, [data.orders]);
 
-    const shiftSlot = (increase) => {
-        return;
-        if (increase) { 
-            setWeelyData(prev => ({
-                ...prev,
-                slot: [prev.slot[0]]
-            }))
-        }
-    }
 
     return (
         <div className="bg-white md:my-4 rounded-lg p-4 w-full md:w-6/12">
-            <div className="w-full flex justify-between">
-                <ChevronFirst size={20} onClick={() => shiftSlot(false)} />
+            <div className="w-full">
                 <span className="font-semibold text-xs text-gray-400">Last 7 Days daily orders</span>
-                <ChevronLast size={20} onClick={() => shiftSlot(true)} />
             </div>
             <ReactApexChart
                 options={{

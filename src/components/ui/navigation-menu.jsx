@@ -1,21 +1,25 @@
-import { ArrowLeftFromLineIcon, ArrowRightFromLineIcon, BookA, ChevronRightCircle, Gauge, Menu, PackageIcon } from "lucide-react"
+import { ArrowLeftFromLineIcon, ArrowRightFromLineIcon, BookA, CalendarDays, Gauge, Menu, PackageIcon } from "lucide-react"
 
 import { cn } from "../../lib/utils"
 import { useNavigate } from "react-router-dom"
 import { Button } from "./button";
 import { Sheet, SheetContent, SheetTrigger } from "./sheet"
 import { useState } from "react";
+import useAppContext from "../../context/use-app-context";
 
 const navicons = {
   "dashboard": <Gauge className="inline" size={20} />,
   "products": <PackageIcon className="inline" size={20} />,
-  "orders": <BookA className="inline" size={20} />
+  "orders": <BookA className="inline" size={20} />,
+  "calendar": <CalendarDays className="inline" size={20} />
 }
 
 // eslint-disable-next-line react/prop-types
-function Sidebar({ currPage }) {
+function Sidebar() {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+
+  const { currPage } = useAppContext();
 
   const Navbar = ({ className }) => {
     return <div className={cn(className, "h-full md:flex flex-col justify-between bg-black text-white",
@@ -33,7 +37,7 @@ function Sidebar({ currPage }) {
         </div>
         <div className="w-full md:p-5">
           {
-            ["dashboard", "products", "orders"].map((item, index) => (
+            ["dashboard", "products", "orders", "calendar"].map((item, index) => (
               <div key={index} onClick={() => navigate(`/${item}`)}
                 className={cn("w-full my-3 text-left px-2 py-1 transition flex items-center gap-2 capitalize text-sm hover:underline cursor-pointer",
                   open ?

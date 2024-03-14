@@ -14,6 +14,20 @@ export function filterByAnyValue(arr, searchValue) {
   );
 }
 
+export function isWithinNext10Days(dateToCheck) {
+  // Get the current date
+  const currentDate = new Date();
+
+  // Calculate the date 10 days from now
+  const futureDate = new Date();
+  futureDate.setDate(currentDate.getDate() + 10);
+
+  // Return true if the given date is between current date and future date
+  return dateToCheck >= currentDate && dateToCheck <= futureDate;
+}
+
+
+
 export function modifyMockdataToCurr() {
   const products = mock_data.products.map(product => ({
     ...product,

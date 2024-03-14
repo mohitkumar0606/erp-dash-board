@@ -7,6 +7,7 @@ import { Button } from "../ui/button";
 import { modifyMockdataToCurr } from "../../lib/utils";
 import PieChart from "./pie-chart";
 import LineChart from "./line-chart"
+import UpcommingDeliveries from "./upcomming-deliveries";
 
 // eslint-disable-next-line react/prop-types
 const App = () => {
@@ -42,9 +43,10 @@ const App = () => {
             <SummaryCards />
             <div className="w-full flex justify-between flex-col md:flex-row gap-4">
                 <LowInventory />
-                <LineChart />
+                <UpcommingDeliveries />
                 <PieChart />
             </div>
+            <LineChart />
         </div>
     );
 };

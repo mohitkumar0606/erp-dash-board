@@ -34,7 +34,7 @@ const LowInventory = () => {
     });
 
     return (
-        <div className="bg-white rounded-lg my-4 p-3 md:w-3/12">
+        <div className="bg-white rounded-lg md:my-4 p-3 md:w-3/12">
             <span className="text-gray-400 text-sm">Low inventory categories</span>
             {inventory.map((item) => <InventoryCard key={Math.random()} data={item} />)}
         </div>
