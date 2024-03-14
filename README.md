@@ -42,7 +42,7 @@ This is a Vite-based React app for an ERP dashboard.
 
 ### App walkthrough
 
-![Alt text](https://github.com/mohitkumar0606/erp-dashboard/public/1.jpeg)
+1.    ![1](https://github.com/mohitkumar0606/erp-dashboard/assets/100067909/dcd5b08c-2661-44fe-81b9-89aa67440eac)
 
 ## Technologies Used
 
