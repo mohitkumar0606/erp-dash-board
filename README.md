@@ -21,9 +21,7 @@ This is a Vite-based React app for an ERP dashboard.
 
 - Calendar functionality is included.
 
-### Theming
 
-- Theming options are available for customization.
 
 ## Getting Started
 
