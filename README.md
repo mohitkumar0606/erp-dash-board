@@ -41,6 +41,11 @@ This is a Vite-based React app for an ERP dashboard.
 3. Start the development server with `npm run dev`.
 4. Build the project for production with `npm run build`.
 
+
+### App walkthrough
+
+![Alt text](https://github.com/mohitkumar0606/erp-dashboard/public/1.jpeg)
+
 ## Technologies Used
 
 - React
